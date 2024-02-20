@@ -627,48 +627,48 @@
         <div id="page-title" class="top-panel-item"><strong>GAN</strong> Lab</div>
 
         <div id="distribution-selection" class="top-panel-item">
-          <div class="top-column-title">Data Distribution</div>
+          <div class="top-column-title">数据分布</div>
           <div id="distribution-image-list">
             <div class="distribution-image">
               <img class="distribution-item"
                 id="distribution-item-line" 
                 data-distribution-name="line" 
-                title="Simple line"
+                title="简单的线"
                 src="images/distribution-line.png" />
             </div>
             <div class="distribution-image">
               <img class="distribution-item selected" 
                 id="distribution-item-gaussians" 
                 data-distribution-name="gaussians" 
-                title="Mixture of Gaussians" 
+                title="高斯混合" 
                 src="images/distribution-gaussians.png" />
             </div>
             <div class="distribution-image">
               <img class="distribution-item" 
                 id="distribution-item-ring" 
                 data-distribution-name="ring"
-                title="Ring" 
+                title="环形" 
                 src="images/distribution-ring.png" />
             </div>
             <div class="distribution-image">
               <img class="distribution-item" 
                 id="distribution-item-disjoint" 
                 data-distribution-name="disjoint" 
-                title="3 disjoint regions" 
+                title="3个不相交的区域" 
                 src="images/distribution-disjoint.png" />
             </div>
             <div class="distribution-image">
               <i class="distribution-item material-icons" 
                 id="distribution-item-drawing" 
                 data-distribution-name="drawing"
-                title="Draw one by yourself">brush</i>
+                title="自己绘制图像"></i>
             </div>
           </div>
           <div id="distribution-selection-checkbox">
             <paper-checkbox id="toggle-pretrained" 
-              title="Train on top of a pre-trained model or train from scratch"
+              title="在预先训练的模型之上进行训练或从头开始训练"
               checked>
-              Use pre-trained model
+              使用预训练模型
             </paper-checkbox>
           </div>
         </div>
@@ -676,41 +676,41 @@
         <div id="timeline-controls" class="top-panel-item">
           <button 
             class="mdl-button mdl-js-button mdl-button--icon ui-resetButton"
-            id="reset-button" title="Reset the model">
-            <i class="material-icons" id="button-top-reset">replay</i>
+            id="reset-button" title="重置模型">
+            <i class="material-icons" id="button-top-reset">重新播放</i>
           </button>
           <button class="mdl-button mdl-js-button mdl-button--fab 
             mdl-button--colored ui-playButton"
-            id="play-pause-button" title="Run/Pause training">
-            <i class="material-icons" id="button-top-play">play_arrow</i>
-            <i class="material-icons" id="button-top-pause">pause</i>
+            id="play-pause-button" title="开始/暂停 训练">
+            <i class="material-icons" id="button-top-play">播放箭头</i>
+            <i class="material-icons" id="button-top-pause">暂停</i>
           </button>
           <button class="mdl-button mdl-js-button mdl-button--icon"
-            id="slow-step" title="Slow-motion mode" 
+            id="slow-step" title="慢动作模式" 
             style="margin-left: 5px">
             <i class="material-icons" id="button-top-slow">
-              slow_motion_video
+              慢动作视频
             </i>
           </button>
           <button 
             class="mdl-button mdl-js-button mdl-button--icon ui-stepButton"
-            id="next-step-button" title="Train for one epoch" 
+            id="next-step-button" title="每个epoch训练一次" 
             style="margin-left: 5px">
-            <i class="material-icons" id="button-top-next">skip_next</i>
+            <i class="material-icons" id="button-top-next">跳过</i>
           </button>
 
           <div id="step-buttons" style="display: none">
             <button id="next-step-g-button" 
-              title="Train only generator for one epoch">
-              Generator
+              title="只训练一个 epoch 的生成器">
+              生成器
             </button>
             <button id="next-step-d-button" 
-              title="Train only discriminator for one epoch">
-              Discriminator
+              title="只训练一个epoch的鉴别器">
+              鉴别器
             </button>
             <button id="next-step-all-button" 
-              title="Train both discriminator and generator for one epoch">
-              Both
+              title="训练一个epoch的鉴别器和生成器">
+              两者同时
             </button>
           </div>
         </div>
@@ -722,7 +722,7 @@
 
         <div id="save" class="top-panel-item">
           <button class="mdl-button mdl-js-button mdl-button--icon"
-            id="save-model" title="Save model" style="margin-left: 5px">
+            id="save-model" title="保存模型" style="margin-left: 5px">
             <i class="material-icons">save_alt</i>
           </button>
         </div>
@@ -776,7 +776,7 @@
               <div id="component-d-loss" class="model-component"
                 style="top: 160px; left: 667px">
                 <div id="d-loss-bar" class="loss-bar" title=""></div>
-                <div class="component-loss-label">Discriminator<br />loss</div>
+                <div class="component-loss-label">鉴别器<br />loss</div>
                 <div class="component-tooltip">
                   <span id="d-loss-value" title="loss"></span>
                 </div>
@@ -785,7 +785,7 @@
               <div id="component-g-loss" class="model-component"
                 style="top: 275px; left: 667px">
                 <div id="g-loss-bar" class="loss-bar" title=""></div>
-                <div class="component-loss-label">Generator<br />loss</div>
+                <div class="component-loss-label">生成器<br />loss</div>
                 <div class="component-tooltip">
                   <span id="g-loss-value" title="loss"></span>
                 </div>
@@ -814,17 +814,17 @@
                   <div class="up-down-buttons">
                     <button class="mdl-button mdl-js-button mdl-button--icon"
                       id="k-d-steps-add-button" 
-                      title="Increase a step per epoch">
+                      title="每个epoch增进一次">
                       <i class="material-icons" id="button-k-d-steps-up">
-                        keyboard_arrow_up
+                        keyboard_arrow_up 键盘上键
                       </i>
                     </button>
                     <br />
                     <button class="mdl-button mdl-js-button mdl-button--icon"
                       id="k-d-steps-remove-button" 
-                      title="Decrease a step per iter">
+                      title="每个迭代减少一次">
                       <i class="material-icons" id="button-k-d-steps-down">
-                        keyboard_arrow_down
+                        keyboard_arrow_down 键盘下键
                       </i>
                     </button>
                   </div>
@@ -886,7 +886,7 @@
                 </div>
                 <div class="config-item" style="width: 120px">
                   <div class="up-down-buttons">
-                    <label>Learning rate:</label>
+                    <label>学习率:</label>
                   </div>
                   <div class="up-down-buttons" style="width: 48px">
                     <paper-dropdown-menu no-animations no-label-float>
@@ -909,7 +909,7 @@
                 style="top: 335px; left: 180px">
                 <div class="config-item" style="width: 120px">
                   <div class="up-down-buttons">
-                    <label>Optimizer:</label>
+                    <label>优化器:</label>
                   </div>
                   <div class="up-down-buttons" style="width: 65px">
                     <paper-dropdown-menu no-animations no-label-float>
@@ -928,7 +928,7 @@
                 </div>
                 <div class="config-item" style="width: 120px">
                   <div class="up-down-buttons">
-                    <label>Learning rate:</label>
+                    <label>学习率:</label>
                   </div>
                   <div class="up-down-buttons" style="width: 48px">
                     <paper-dropdown-menu no-animations no-label-float>
@@ -955,9 +955,9 @@
 
               <div id="component-generated-prediction" class="model-component"
                 style="top: 230px; left: 525px">
-                <div class="component-sub-label">Fake</div>
+                <div class="component-sub-label">虚假</div>
                 <svg id="svg-generated-prediction"></svg>
-                <div class="component-label">Prediction of<br />Samples</div>
+                <div class="component-label">对样本的<br />预测准确率</div>
               </div>
 
               <div id="component-discriminator"
@@ -1113,7 +1113,7 @@
 
               <div id="component-generated-samples" class="model-component"
                 style="top: 230px; left: 255px">
-                <div class="component-sub-label">Fake
+                <div class="component-sub-label">虚假
                   <div id="g-samples-toggle" class="checkbox-toggle"
                     title="show/hide fake samples">
                     <paper-checkbox type="checkbox" id="show-g-samples" 
@@ -1122,13 +1122,13 @@
                   </div>
                 </div>
                 <svg id="svg-generated-samples"></svg>
-                <div class="component-label">Samples</div>
+                <div class="component-label">样本</div>
               </div>
 
               <div id="component-noise" class="model-component"
                 style="top: 230px; left: -15px">
                 <svg id="svg-noise"></svg>
-                <div class="component-label">Noise</div>
+                <div class="component-label">噪声</div>
               </div>
 
               <div id="component-options-noise" class="model-component-options"
@@ -1154,12 +1154,12 @@
                 class="tooltip tooltip-for-d"
                 style="top: 0; left: 0px">
                 <div class="tooltip-number">1</div>
-                Generator derives samples from noise
+                生成器从噪声中派生样本
               </div>
               <div id="tooltip-d-prediction" class="tooltip tooltip-for-d"
                 style="top: 0; left: 150px">
                 <div class="tooltip-number">2</div>
-                Discriminator classifies samples
+                鉴别器分类样本
               </div>
               <div id="tooltip-d-loss" class="tooltip tooltip-for-d"
                 style="top: 0; left: 300px">
@@ -1169,39 +1169,39 @@
               <div id="tooltip-d-gradients" class="tooltip tooltip-for-d"
                 style="top: 0; left: 450px">
                 <div class="tooltip-number">4</div>
-                Computes discriminator gradients
+                计算鉴别器梯度
               </div>
               <div id="tooltip-update-discriminator" 
                 class="tooltip tooltip-for-d"
                 style="top: 0; left: 600px">
                 <div class="tooltip-number">5</div>
-                Updates discriminator based on gradients
+                基于梯度更新鉴别器
               </div>
               <div id="tooltip-g-generated-samples" 
                 class="tooltip tooltip-for-g"
                 style="top: 500px; left: 0px">
                 <div class="tooltip-number">1</div>
-                Generator derives samples from noise
+                生成器从噪声中获取样本
               </div>
               <div id="tooltip-g-prediction" class="tooltip tooltip-for-g"
                 style="top: 500px; left: 150px">
                 <div class="tooltip-number">2</div>
-                Discriminator classifies fake samples only
+                鉴别器仅对假样本进行分类
               </div>
               <div id="tooltip-g-loss" class="tooltip tooltip-for-g"
                 style="top: 500px; left: 300px">
                 <div class="tooltip-number">3</div>
-                Computes generator loss
+                计算生成器loss
               </div>
               <div id="tooltip-g-gradients" class="tooltip tooltip-for-g"
                 style="top: 500px; left: 450px">
                 <div class="tooltip-number">4</div>
-                Computes generator gradients
+                计算生成器梯度
               </div>
               <div id="tooltip-update-generator" class="tooltip tooltip-for-g"
                 style="top: 500px; left: 600px">
                 <div class="tooltip-number">5</div>
-                Updates generator based on gradients
+                基于梯度更新生成器
               </div>
             </div>
           </div>
@@ -1247,38 +1247,39 @@ multiple layers. The layers can be turned on or off using checkboxes.">
                   style="color: var(--generator-color);">fake samples</span>.
               </div>
               <div class="layers-descriptions-section">
-                Background colors of grid cells represent
+                网格单元格的背景颜色代表
+                
                 <span id="toggle-right-discriminator"
                   class="toggle-right checked"
-                  title="click to toggle this layer"
+                  title="点击切换此层"
                   style="color: rgb(64, 128, 247);">
-                    discriminator</span>'s classifications.
+                  判别器</span>的分类。
                 <br />
-                Samples in
+                在
                 <span style="color: var(--real-data-color);">green regions</span>
-                are likely to be real;
-                those in
+                的样本可能是真实的；
+                在
                 <span style="color: var(--generator-color);">purple regions</span>
-                likely fake.
+                的样本可能是假的。
               </div>
               <div class="layers-descriptions-section">
-                <strong>Manifold</strong> represents
+                <strong>流形</strong> 表示
                 <span id="toggle-right-generator"
                   class="toggle-right"
-                  title="click to toggle this layer"
+                  title="点击切换此层""
                   style="color: var(--generator-color);">
-                    generator</span>'s transformation results from noise space.
+                  生成器</span>从噪声空间的转换结果。
                 <br />
-                Opacity encodes density:
-                darker purple means more samples in smaller area.
+                不透明度编码密度：
+                更深的紫色意味着在更小的区域有更多的样本。
               </div>
               <div class="layers-descriptions-section"> 
-                Pink lines from fake samples represent
+                假样本的粉红线代表生成器的
                 <span id="toggle-right-gradients"
                   class="toggle-right checked"
-                  title="click to toggle this layer"
+                  title="点击切换此层"
                   style="color: var(--gradient-color);">
-                  gradients</span> for generator.
+                  梯度</span>。
                 <br />
                 <svg width="12" height="12">
                   <circle class="generated-dot" r="2"
@@ -1287,8 +1288,8 @@ multiple layers. The layers can be turned on or off using checkboxes.">
                     transform="translate(2,10)"
                     points="0,0 1,1 10,-10 -1,-1"></polygon>
                 </svg> 
-                This sample needs to move upper right 
-                to decrease generator's loss.
+                这个样本需要向右上方移动
+                以减少生成器的损失。
               </div>
             </div>
 
@@ -1296,18 +1297,18 @@ multiple layers. The layers can be turned on or off using checkboxes.">
               <canvas id="input-drawing-canvas" 
                 width="400" height="400"></canvas>
               <div id="drawing-instruction">
-                Draw a distribution above, then click the apply button.
+                在上面绘制一个分布，然后单击“应用”按钮。
               </div>
               <button id="finish-drawing" 
                 class="mdl-button mdl-js-button mdl-button--raised">
-                Apply
+                应用
               </button>
             </div>
           </div>
         </div>
 
         <div id="charts-panel" class="panel-item">
-          <div class="panel-title">Metrics</div>
+          <div class="panel-title">指标</div>
 
           <div id="chart-container">
             <canvas id="cost-chart" width="180" height="180"></canvas>

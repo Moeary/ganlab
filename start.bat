@@ -1,4 +1,7 @@
-// 名字为start.bat
-@echo off
+@echo on
 call nvm use 8.0.0
-call yarn run
+call yarn prep
+call wsl
+call nvm use 8.0.0
+call .\scripts\watchdemo
+```
