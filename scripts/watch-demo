@@ -49,7 +49,7 @@ watchify.stderr.on('data', (data) => {
 
       httpServer.stdout.on('data', data => {
         data = data.toString().split('\n')[0].trim();
-        if (data.startsWith('http://127.0.0.1:')) {
+        if (data.startsWith('http://127.0.0.1/demo:')) {
           // Open a browser pointing to the demo.
           opn(path.join(data, demoPath));
         }

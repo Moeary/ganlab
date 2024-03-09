@@ -677,26 +677,26 @@
           <button 
             class="mdl-button mdl-js-button mdl-button--icon ui-resetButton"
             id="reset-button" title="重置模型">
-            <i class="material-icons" id="button-top-reset">重新播放</i>
+            <i class="material-icons" id="button-top-reset">Replay</i>
           </button>
           <button class="mdl-button mdl-js-button mdl-button--fab 
             mdl-button--colored ui-playButton"
             id="play-pause-button" title="开始/暂停 训练">
-            <i class="material-icons" id="button-top-play">播放箭头</i>
-            <i class="material-icons" id="button-top-pause">暂停</i>
+            <i class="material-icons" id="button-top-play">Play</i>
+            <i class="material-icons" id="button-top-pause">Stop</i>
           </button>
           <button class="mdl-button mdl-js-button mdl-button--icon"
             id="slow-step" title="慢动作模式" 
             style="margin-left: 5px">
             <i class="material-icons" id="button-top-slow">
-              慢动作视频
+              Slow
             </i>
           </button>
           <button 
             class="mdl-button mdl-js-button mdl-button--icon ui-stepButton"
             id="next-step-button" title="每个epoch训练一次" 
             style="margin-left: 5px">
-            <i class="material-icons" id="button-top-next">跳过</i>
+            <i class="material-icons" id="button-top-next">跳</i>
           </button>
 
           <div id="step-buttons" style="display: none">
@@ -949,7 +949,7 @@
 
               <div id="component-true-prediction" class="model-component"
                 style="top: 136px; left: 525px">
-                <div class="component-sub-label">Real</div>
+                <div class="component-sub-label">真实</div>
                 <svg id="svg-true-prediction"></svg>
               </div>
 
@@ -964,145 +964,95 @@
                 class="model-component model-component-model"
                 style="top: 136px; left: 372px">
                 <svg id="svg-discriminator-output"></svg>
-                <div class="component-label">Discriminator
+                <div class="component-label">判别器
                   <div id="overlap-toggle" class="checkbox-toggle">
                     <paper-checkbox type="checkbox" id="overlap-plots" checked
-                      title="show/hide discriminator's classification">
+                      title="显示/隐藏判别器的分类">
                     </paper-checkbox>
                   </div>
                 </div>
               </div>
 
-              <div id="component-options-discriminator" 
-                class="model-component-options"
-                style="top: 307px; left: 365px">
-                <div class="config-item" style="width: 175px">
-                  <div class="up-down-buttons">
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="d-layers-add-button" title="Add a layer">
-                      <i class="material-icons" id="button-d-layers-up">
-                        keyboard_arrow_up
-                      </i>
-                    </button>
-                    <br />
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="d-layers-remove-button" title="Remove a layer">
-                      <i class="material-icons" id="button-d-layers-down">
-                        keyboard_arrow_down
-                      </i>
-                    </button>
-                  </div>
-                  <div class="up-down-buttons">
-                    <label>
-                      <span id="num-d-layers">1</span> hidden layer(s)</label>
-                  </div>
-                  <div class="up-down-buttons">
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="d-neurons-add-button" 
-                      title="Add a neuron for each layer">
-                      <i class="material-icons" id="button-d-neurons-up">
-                        keyboard_arrow_up
-                      </i>
-                    </button>
-                    <br />
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="d-neurons-remove-button" 
-                      title="Remove a neuron for each layer">
-                      <i class="material-icons" id="button-d-neurons-down">
-                        keyboard_arrow_down
-                      </i>
-                    </button>
-                  </div>
-                  <div class="up-down-buttons">
-                    <label><span id="num-d-neurons">8</span> neuron(s)</label>
-                  </div>
-                </div>
-              </div>
-
-              <div id="component-generator"
-                class="model-component model-component-model"
-                style="top: 136px; left: 102px">
-                  <svg id="svg-generator-manifold"></svg>
-                  <div class="component-label">Generator
-                    <div id="manifold-toggle" class="checkbox-toggle"
-                      title="show/hide generator's manifold">
-                      <paper-checkbox type="checkbox" id="enable-manifold">
-                      </paper-checkbox>
-                    </div>
-                  </div>
-                </div>
-
+              <!-- 生成器配置选项 -->
               <div id="component-options-generator" 
-                class="model-component-options"
-                style="top: 307px; left: 95px">
-                <div class="config-item" style="width: 175px">
+              class="model-component-options"
+              style="top: 307px; left: 95px">
+              <!-- 配置项 -->
+              <div class="config-item" style="width: 175px">
+                  <!-- 添加/删除层的按钮 -->
                   <div class="up-down-buttons">
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="g-layers-add-button" title="Add a layer">
-                      <i class="material-icons" id="button-g-layer-up">
-                        keyboard_arrow_up
-                      </i>
-                    </button>
-                    <br />
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="g-layers-remove-button" title="Remove a layer">
-                      <i class="material-icons" id="button-g-layer-down">
-                        keyboard_arrow_down
-                      </i>
-                    </button>
+                      <button class="mdl-button mdl-js-button mdl-button--icon"
+                          id="g-layers-add-button" title="添加一层">
+                          <i class="material-icons" id="button-g-layer-up">
+                              keyboard_arrow_up
+                          </i>
+                      </button>
+                      <br />
+                      <button class="mdl-button mdl-js-button mdl-button--icon"
+                          id="g-layers-remove-button" title="删除一层">
+                          <i class="material-icons" id="button-g-layer-down">
+                              keyboard_arrow_down
+                          </i>
+                      </button>
                   </div>
+                  <!-- 显示隐藏层数量 -->
                   <div class="up-down-buttons">
-                    <label>
-                      <span id="num-g-layers">1</span> hidden layer(s)</label>
+                      <label>
+                          <span id="num-g-layers">1</span> 隐藏层
+                      </label>
                   </div>
+                  <!-- 添加/删除每层神经元的按钮 -->
                   <div class="up-down-buttons">
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="g-neurons-add-button" 
-                      title="Add a neuron for each layer">
-                      <i class="material-icons" id="button-g-neurons-up">
-                        keyboard_arrow_up
-                      </i>
-                    </button>
-                    <br />
-                    <button class="mdl-button mdl-js-button mdl-button--icon"
-                      id="g-neurons-remove-button" 
-                      title="Remove a neuron for each layer">
-                      <i class="material-icons" id="button-g-neurons-down">
-                        keyboard_arrow_down
-                      </i>
-                    </button>
+                      <button class="mdl-button mdl-js-button mdl-button--icon"
+                          id="g-neurons-add-button" 
+                          title="为每层添加一个神经元">
+                          <i class="material-icons" id="button-g-neurons-up">
+                              keyboard_arrow_up
+                          </i>
+                      </button>
+                      <br />
+                      <button class="mdl-button mdl-js-button mdl-button--icon"
+                          id="g-neurons-remove-button" 
+                          title="为每层删除一个神经元">
+                          <i class="material-icons" id="button-g-neurons-down">
+                              keyboard_arrow_down
+                          </i>
+                      </button>
                   </div>
+                  <!-- 显示神经元数量 -->
                   <div class="up-down-buttons">
-                    <label><span id="num-g-neurons">8</span> neuron(s)</label>
+                      <label><span id="num-g-neurons">8</span> 神经元</label>
                   </div>
-                </div>
+              </div>
               </div>
 
+              <!-- 判别器梯度部分 -->
               <div id="component-discriminator-gradients" 
-                class="model-component"
-                style="top: 7px; left: 430px">
-                <div class="component-label">Gradients</div>
+              class="model-component"
+              style="top: 7px; left: 430px">
+              <div class="component-label">梯度</div>
               </div>
 
+              <!-- 生成器梯度部分 -->
               <div id="component-generator-gradients" class="model-component"
-                style="top: 390px; left: 255px">
-                <svg id="svg-generator-gradients"></svg>
-                <div class="component-label">Gradients
+              style="top: 390px; left: 255px">
+              <svg id="svg-generator-gradients"></svg>
+              <div class="component-label">梯度
                   <div id="g-gradients-toggle" class="checkbox-toggle"
-                    title="show/hide gradients for generator"
-                    style="right: 13px; top: -1px">
-                    <paper-checkbox type="checkbox" id="show-g-gradients" 
-                      checked>
-                    </paper-checkbox>
+                      title="显示/隐藏生成器的梯度"
+                      style="right: 13px; top: -1px">
+                      <paper-checkbox type="checkbox" id="show-g-gradients" 
+                          checked>
+                      </paper-checkbox>
                   </div>
-                </div>
+              </div>
               </div>
 
               <div id="component-true-samples" class="model-component"
                 style="top: 136px; left: 255px">
-                <div class="component-sub-label">Real
+                <div class="component-sub-label">真实
                   <div id="t-samples-toggle" class="checkbox-toggle"
-                    title="show/hide real samples">
+                    title="点我隐藏/显示真实样本">
                     <paper-checkbox type="checkbox" id="show-t-samples" 
                       checked>
                     </paper-checkbox>
